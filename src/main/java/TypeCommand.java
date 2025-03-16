@@ -17,7 +17,7 @@ public class TypeCommand implements Command {
         }
     }
 
-    private String findExecutableInPath(String command) {
+    public String findExecutableInPath(String command) {
         String pathEnv = System.getenv("PATH");
         if (pathEnv == null || pathEnv.isEmpty()) return null;
 
