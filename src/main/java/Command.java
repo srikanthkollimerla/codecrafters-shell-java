@@ -1,5 +1,5 @@
 import java.io.IOException;
 
 public interface Command {
-    void execute(String input) throws IOException;
+    void execute(String input);
 }

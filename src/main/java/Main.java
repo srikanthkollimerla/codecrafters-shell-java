@@ -81,6 +81,7 @@ public class Main {
         CommandRegistry.registerCommand("echo", new EchoCommand());
         CommandRegistry.registerCommand("exit", new ExitCommand());
         CommandRegistry.registerCommand("type", new TypeCommand());
+        CommandRegistry.registerCommand("pwd", new PwdCommand());
     }
 
     private static List<String> combineCommand(String executablePath, String[] arguments) {
