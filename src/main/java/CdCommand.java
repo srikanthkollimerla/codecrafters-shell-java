@@ -6,14 +6,18 @@ public class CdCommand implements Command{
     @Override
     public void execute(String input) {
         String newPath = input.split(" ")[1];
-        if(newPath.equals("./"))
+        if (newPath.equals("./"))
             return;
-        else if(newPath.startsWith("../")){
+        if (newPath.contains("~")) {
+            ShellContext.setCurrentPath(System.getenv("HOME"));
+            return;
+        }
+        if(newPath.startsWith("../")){
             Path path = Paths.get(ShellContext.getCurrentPath()).resolve(newPath).normalize();
             ShellContext.setCurrentPath(path.toString());
             return;
         }
-        else if(newPath.startsWith("./"))
+        if (newPath.startsWith("./"))
             newPath = ShellContext.getCurrentPath() + newPath.replaceFirst("^\\./", "/"); //manual way
 
         File newDir = new File(newPath);
