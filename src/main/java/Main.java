@@ -83,6 +83,7 @@ public class Main {
         CommandRegistry.registerCommand("type", new TypeCommand());
         CommandRegistry.registerCommand("pwd", new PwdCommand());
         CommandRegistry.registerCommand("cd", new CdCommand());
+        CommandRegistry.registerCommand("cat", new CatCommand());
     }
 
     private static List<String> combineCommand(String executablePath, String[] arguments) {

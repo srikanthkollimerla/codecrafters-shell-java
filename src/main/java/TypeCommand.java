@@ -4,7 +4,7 @@ public class TypeCommand implements Command {
     @Override
     public void execute(String input) {
         String commandName = input.substring(5).trim();
-        if (CommandRegistry.hasCommand(commandName)) {
+        if (CommandRegistry.hasCommand(commandName) && !commandName.equals("cat")) {
             System.out.println(commandName + " is a shell builtin");
             return;
         }
