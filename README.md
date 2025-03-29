@@ -17,11 +17,11 @@ This repository contains my implementation of a **custom shell**, built as part 
 - **Executing External Programs with Arguments** (e.g., `ls -la`, `cat file.txt`)  
 - **Support for Quoting with Single Quotes ('')** to preserve spaces  
 
-## Running the Shell 🏃  
+# Future Enhancements 🔧
 
-1. Clone the repository:  
-   ```sh
-   git clone https://github.com/yourusername/build-your-own-shell.git
-   cd build-your-own-shell
-2. Compile the Java source code: javac Shell.java
-3. java shell
+- Add support for double quotes ("")
+- Implement environment variable expansion (e.g., $HOME, $PATH)
+- Improve error handling and edge case handling
+
+# Acknowledgments 🎯
+Codecrafters' Build Your Own Shell challenge.
