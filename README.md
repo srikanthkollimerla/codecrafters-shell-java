@@ -1,35 +1,27 @@
-[![progress-banner](https://backend.codecrafters.io/progress/shell/460d0ac8-68eb-424f-bf6b-cefc6610af7c)](https://app.codecrafters.io/users/codecrafters-bot?r=2qF)
+# Build Your Own Shell 🖥️  
 
-This is a starting point for Java solutions to the
-["Build Your Own Shell" Challenge](https://app.codecrafters.io/courses/shell/overview).
+This repository contains my implementation of a **custom shell**, built as part of the Codecrafters challenge. The shell is written in **Java** and includes support for various built-in commands and features.  
 
-In this challenge, you'll build your own POSIX compliant shell that's capable of
-interpreting shell commands, running external programs and builtin commands like
-cd, pwd, echo and more. Along the way, you'll learn about shell command parsing,
-REPLs, builtin commands, and more.
+## Features Implemented 🚀  
 
-**Note**: If you're viewing this repo on GitHub, head over to
-[codecrafters.io](https://codecrafters.io) to try the challenge.
+- **REPL (Read-Eval-Print Loop)** – Interactive command-line processing  
+- **Built-in Commands:**  
+  - `echo` – Prints text to standard output  
+  - `exit` – Terminates the shell  
+  - `type` – Identifies whether a command is a built-in function or an executable  
+  - `pwd` – Prints the current working directory  
+  - `cd` – Changes the current directory  
+    - Supports **absolute paths** (e.g., `/usr/local/bin`)  
+    - Supports **relative paths** (e.g., `./`, `../`, `./dir`)  
+    - Supports `~` for **home directory**  
+- **Executing External Programs with Arguments** (e.g., `ls -la`, `cat file.txt`)  
+- **Support for Quoting with Single Quotes ('')** to preserve spaces  
 
-# Passing the first stage
+## Running the Shell 🏃  
 
-The entry point for your `shell` implementation is in `src/main/java/Main.java`.
-Study and uncomment the relevant code, and push your changes to pass the first
-stage:
-
-```sh
-git commit -am "pass 1st stage" # any msg
-git push origin master
-```
-
-Time to move on to the next stage!
-
-# Stage 2 & beyond
-
-Note: This section is for stages 2 and beyond.
-
-1. Ensure you have `mvn` installed locally
-1. Run `./your_program.sh` to run your program, which is implemented in
-   `src/main/java/Main.java`.
-1. Commit your changes and run `git push origin master` to submit your solution
-   to CodeCrafters. Test output will be streamed to your terminal.
+1. Clone the repository:  
+   ```sh
+   git clone https://github.com/yourusername/build-your-own-shell.git
+   cd build-your-own-shell
+2. Compile the Java source code: javac Shell.java
+3. java shell
